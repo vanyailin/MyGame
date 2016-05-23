@@ -1,7 +1,7 @@
 var appWidth=10;
 var appHeight=10;
 var startGame = [];
-$.getJSON('https://github.com/vanyailin/GameLife/blob/gh-pages/live.json', function(data){
+$.getJSON('live.json', function(data){
 		startGame=data;
 		console.log(startGame);
 		});
