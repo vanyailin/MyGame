@@ -1,5 +1,6 @@
 .game {
-	width: 100%;	
+	width: 100%;
+	margin:0 auto;
 }
 .field{
 	border: 1px solid black;
@@ -8,14 +9,13 @@
 	float: left;
 	}
 .headline{
-	display: inline-block;	
-	margin-left:47%;
+	margin:0 auto;
 	font-size:16pt;
 	font-weight:bold;
+	text-align:center;
 	}
 .rules{
-	display: inline-block;	
-	margin-left:38%;
+	margin:0 auto;
 	font-size:12pt;
 	text-align:center;
 	}
