@@ -54,7 +54,7 @@ $.getJSON('live.json', function(data){
  	return life;
  	}
  		});
-	});
+});
 
 	
 	
