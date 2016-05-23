@@ -4,8 +4,7 @@ var startGame = [];
 $.getJSON('live.json', function(data){
 		startGame=data;
 		console.log(startGame);
-		});
-$(function(){
+		$(function(){
 	for (var x = 1; x <= appWidth; x++) {
 		for (var y = 1; y <= appHeight; y++) {
 			$('<div></div>')
@@ -55,6 +54,8 @@ $(function(){
  	return life;
  	}
  		});
+	});
+
 	
 	
 	
