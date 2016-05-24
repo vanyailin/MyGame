@@ -24,13 +24,13 @@ $.getJSON('live.json', function(data){
 			var x = $(this).data('x');
 			var y = $(this).data('y');
 			var count = neigbours(x,y);
-			var elements = [];
+			var element = [];
 			if (this.className != 'field live' && count==3){
-				elements = [x, y, "live"];
-				newGeneration.push(elements);
+				element = [x, y, "live"];
+				newGeneration.push(element);
 			} else if (this.className == 'field live' && count!=3 && count!=2) {
-				elements = [x, y, "dead"];
-				newGeneration.push(elements);
+				element = [x, y, "dead"];
+				newGeneration.push(element);
 			}
 			});
 		$.each(newGeneration, function() {
