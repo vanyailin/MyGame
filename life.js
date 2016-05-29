@@ -1,11 +1,12 @@
 var appWidth=10;
 var appHeight=10;
 var startGame = [];
+
 $.getJSON('live.json', function(data){
 		startGame=data;
 		console.log(startGame);
 		$(function(){
-	for (var x = 1; x <= appWidth; x++) {
+		for (var x = 1; x <= appWidth; x++) {
 		for (var y = 1; y <= appHeight; y++) {
 			$('<div></div>')
 				.addClass('field').addClass('dead')
@@ -14,11 +15,16 @@ $.getJSON('live.json', function(data){
 				.appendTo('#app')
 		}
 	}
+	
 	$.each(startGame, function() {
 		console.log(this);
 		$('#field'+this[0]+'-'+this[1]).addClass('live').removeClass('dead');
-	});
-	timerId = setInterval(function() {
+	});	
+	
+	$('#start').on('click', game);
+	
+	function game (){
+	var timerId = setInterval(function() {
 		var newGeneration = [];
 		$('.field').each(function() {
 			var x = $(this).data('x');
@@ -53,10 +59,8 @@ $.getJSON('live.json', function(data){
  	}
  	return life;
  	}
+	}
  		});
+	
+
 });
-
-	
-	
-	
-
