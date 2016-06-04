@@ -49,6 +49,9 @@ $.getJSON('live.json', function(data){
 				alert("Спасибо за игру! :)");
 			}
 		},2000);
+	
+	$('#start').off('click');
+	
 	function neigbours(x, y) {
 		var life = 0;
 		var directions = [{x:-1,y:-1},{x:-1, y:0},{x:-1, y:1},{x:0, y:1},{x:0,y:-1},{x:1, y:1},{x:1, y:0},{x:1, y:-1}]
