@@ -17,7 +17,7 @@ $.getJSON('live.json', function(data){
 		}
 	
 		$.each(startGame, function() {
-		$('#field'+this[0]+'-'+this[1]).addClass('live').removeClass('dead');
+			$('#field'+this[0]+'-'+this[1]).addClass('live').removeClass('dead');
 		});	
 	
 		$('#start').on('click', game);
