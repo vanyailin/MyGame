@@ -54,11 +54,11 @@ $.getJSON('live.json', function(data){
 		function neigbours(x, y) {
 			var life = 0;
 			var directions = [{x:-1,y:-1},{x:-1, y:0},{x:-1, y:1},{x:0, y:1},{x:0,y:-1},{x:1, y:1},{x:1, y:0},{x:1, y:-1}]
-				for (var i=0; i<directions.length; i++){
-					if ($('#field'+(x+directions[i].x)+'-'+(y+directions[i].y)).hasClass('live')) {
-						life++;
-					}	
-				}
+			for (var i=0; i<directions.length; i++){
+				if ($('#field'+(x+directions[i].x)+'-'+(y+directions[i].y)).hasClass('live')) {
+					life++;
+				}	
+			}
 			return life;
 		}
 		}
