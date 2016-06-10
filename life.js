@@ -49,20 +49,18 @@ $.getJSON('live.json', function(data){
 				}
 			},2000);
 		
-		$('#start').off('click');
-		
-		function neigbours(x, y) {
-			var life = 0;
-			var directions = [{x:-1,y:-1},{x:-1, y:0},{x:-1, y:1},{x:0, y:1},{x:0,y:-1},{x:1, y:1},{x:1, y:0},{x:1, y:-1}]
-			for (var i=0; i<directions.length; i++){
-				if ($('#field'+(x+directions[i].x)+'-'+(y+directions[i].y)).hasClass('live')) {
-					life++;
-				}	
+			$('#start').off('click');
+			
+			function neigbours(x, y) {
+				var life = 0;
+				var directions = [{x:-1,y:-1},{x:-1, y:0},{x:-1, y:1},{x:0, y:1},{x:0,y:-1},{x:1, y:1},{x:1, y:0},{x:1, y:-1}]
+				for (var i=0; i<directions.length; i++){
+					if ($('#field'+(x+directions[i].x)+'-'+(y+directions[i].y)).hasClass('live')) {
+						life++;
+					}	
+				}
+				return life;
 			}
-			return life;
-		}
 		}
  	});
-	
-
 });
